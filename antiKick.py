@@ -1,6 +1,9 @@
 from time import sleep
 import win32gui, win32con
-import pydirectinput as dirI
+try:
+    import pydirectinput as dirI
+except ImportError:
+    print("missing imports! please run 'pip install PyDirectInput' in a terminal")
 
 while True:
     sleep(6)
